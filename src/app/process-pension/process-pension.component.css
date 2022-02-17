@@ -1,0 +1,85 @@
+.container{
+  background-image: url(https://i.pinimg.com/originals/0d/e4/1a/0de41a3c5953fba1755ebd416ec109dd.gif);
+  background-repeat: no-repeat;
+  background-position: 350px 60px;
+  padding-bottom: 50px;
+  background-size: 30%;
+  color: transparent;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  line-height: .75;
+  justify-content: flex-start;
+}
+.container1{
+  background-image: url(https://cdn.dribbble.com/users/251873/screenshots/9388228/error-img.gif);
+  background-repeat: no-repeat;
+  background-position: 350px 50px;
+  padding-bottom: 50px;
+  background-size: 20%;
+  color: transparent;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  line-height: .75;
+  justify-content: flex-start;
+}
+
+  .wrapper {
+    height: 100vh;
+     /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing-demo {
+    width: 41ch;
+    animation: typing 2s steps(41);
+    white-space: nowrap;
+    overflow: inherit;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+    color:blue;
+  }
+  .typing-demo2 {
+    width: 35ch;
+    animation: typing 2s steps(35), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: inherit;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+    color: blue;
+  }
+  .wrapper1 {
+    height: 100vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .typing-demo1 {
+    width: 82ch;
+    animation: typing 2s steps(82), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: inherit;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+    color: blue;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }

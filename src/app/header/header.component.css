@@ -1,0 +1,8 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.containerbg{
+  background-image: linear-gradient(to left, rgba(13, 16, 180, 0.363), rgb(201, 191, 191));
+  padding: 30px;
+  color: rgba(50, 51, 45, 0.925);
+}

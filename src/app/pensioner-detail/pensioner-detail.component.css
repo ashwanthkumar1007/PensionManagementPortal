@@ -1,0 +1,39 @@
+.container{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkxBGonXyZAyqrqDqxrKwEEiHyRNlhQbk1u3e9cC70h6qkCekbCSLinaWWnuj07QvQ6AU&usqp=CAU') ;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    background-size: 60%,100%;
+    object-fit: fill;
+    margin:0;
+}
+.containerbg{
+    width:400px;
+    height:500px;
+    top:55%;
+    left:80%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.4);
+    padding:60px 30px;
+    box-sizing: border-box;
+    box-shadow: 8px 8px 50px #000;
+}
+.warn{
+    background-color: red;
+}
+.text{
+    color: white;
+}
+.flexfill {
+    display: flex;
+    justify-content: center;
+    color: honeydew;
+  }
+
+input.ng-touched.ng-invalid{
+    border : 1px solid red;
+}
+
+small{
+    color:rgb(126, 33, 33);
+}

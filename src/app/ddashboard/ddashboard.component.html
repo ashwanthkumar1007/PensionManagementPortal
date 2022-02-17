@@ -1,0 +1,23 @@
+
+
+<div fxLayoutAlign="center center" fxFlexFill class="container">
+    <mat-card fxFlex="30" class="containerbg">
+
+    <div class="form-group">
+        <label for="aadhaarNumber"><h3>AadhaarNumber</h3></label>
+        <mat-card class="whitebg">           
+        <h1><span>{{ProcessPensionInput.aadharNumber}}</span></h1>
+    </mat-card>
+    </div> 
+    <br>
+    <div class="form-group">
+        <label for="pensionAmount">Pension Amount</label>
+        <input type="text" class="form-control" name="pensionAmount" [(ngModel)]="ProcessPensionInput.pensionAmount" placeholder="pensionAmount" required=""/>
+    </div> 
+    <div class="flexfill">
+    <h2> <button mat-raised-button type="submit" (click)="process()" class="btn btn-info">processPension</button></h2>
+</div>
+    </mat-card>
+    </div>
+       
+       

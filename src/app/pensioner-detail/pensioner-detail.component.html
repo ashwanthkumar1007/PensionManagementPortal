@@ -1,0 +1,57 @@
+<div fxLayoutAlign="center center" fxFlexFill class="container">
+    <mat-card fxFlex="30" class="containerbg">
+        <mat-card-title class="flexfill">Pension Details Form</mat-card-title>
+<form #pensiondetailsform="ngForm" (ngSubmit)="onSubmit(pensiondetailsform.value)" method="GET" name="pension" id="pension" ngNativeValidate>
+  <div class="form-group">
+    <label for="pensionerName">Name</label>
+    <input type="text" class="form-control" name="pensionerName" ngModel placeholder="username" required="" #pensionerName = "ngModel"/>
+    <small class="form-test text-muted alert " *ngIf="pensionerName.touched && !pensionerName.valid">Please enter Your Name<br/></small>
+  </div>
+   <div class=form-group>
+    <label for="pan">Pan</label>
+    <input type="text" class="form-control" name="pan" ngModel placeholder="pan" required="" pattern="^[A-Z]{5}[0-9]{4}[A-Z]{1}$"#pan = "ngModel"/>
+    <div *ngIf = "!pan.valid && (pan.dirty || aadharNumber.touched)">
+      <small class="form-test text-muted" *ngIf="pan.errors.pattern">Please enter valid Pan details<br/></small>
+    </div>
+    
+    </div>
+    <div class="form-group">
+    <label for="aadharNumber">Aadhaar</label>
+
+    <input type="text" class="form-control"  name="aadharNumber" ngModel placeholder="aadhar" pattern="^[0-9]{1}[0-9]{3}[0-9]{4}[0-9]{4}$" required=""  #aadharNumber = "ngModel"/>
+
+    <div *ngIf = "!aadharNumber.valid && (aadharNumber.dirty || aadharNumber.touched)">
+      <small class="form-test text-muted" *ngIf="aadharNumber.errors.pattern">Enter only numbers and minlength should be 12<br/></small>
+     
+    </div>
+    
+   </div> 
+   <div class=form-group>
+    <label for="pensionerDob">Date</label>
+    <input type="date" class="form-control" name="pensionerDob" ngModel placeholder="date" required="" #pensionerDob = "ngModel"/>
+    <small class="form-test text-muted" *ngIf="pensionerDob.touched && !pensionerDob.valid">Please enter Your Name<br/></small>
+    <br>
+  </div>
+  <div class=form-group>
+    <label for="pensionType">Pension Type</label><br>
+    <mat-form-field appearance="fill">
+       <mat-label>PensionType</mat-label>
+       <mat-select name="pensionType" id="typeOfPension" ngModel>
+         <mat-option value="Family">Family pension</mat-option>
+         <mat-option value="Self">Self pension</mat-option>
+       </mat-select>
+     </mat-form-field>
+  </div>    
+      <p *ngIf="error" class="error" >
+        <mat-card class="warn">
+        <span class="text">{{message}}</span>
+        <!-- {{ error }} -->
+    </mat-card>
+    </p>
+    <br>
+    <div class="flexfill">
+    <button mat-raised-button type="submit" value="Submit" class="btn btn-info" [disabled]="!pensiondetailsform.valid">Submit</button>
+</div>
+</form>
+</mat-card>
+</div>
